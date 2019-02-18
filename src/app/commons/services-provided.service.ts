@@ -16,4 +16,8 @@ export class ServicesProvidedService {
     return this.http.get<ServiceBackend[]>(this.api);
   }
 
+  public create(data: ServiceBackend): Observable<ServiceBackend> {
+    return this.http.post<ServiceBackend>(this.api, data);
+  }
+
 }
