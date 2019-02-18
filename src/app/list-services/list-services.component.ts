@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import ServiceBackend from '../commons/models/services.backend';
 
 @Component({
   selector: 'app-list-services',
@@ -6,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-services.component.css']
 })
 export class ListServicesComponent implements OnInit {
+
+  @Input()
+  listServices: ServiceBackend[];
 
   constructor() { }
 
