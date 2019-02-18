@@ -1,3 +1,13 @@
-<p>
-  form-services works!
-</p>
+<h1>Servicio</h1>
+<form [formGroup]="formService" (ngSubmit)="onSubmit()">
+  <input type="text" formControlName="name">
+  <input type="text" formControlName="description">
+  <button type="submit">Guardar</button>
+  <button (click)="clearForm()" type="reset">Cancelar</button>
+</form>
+
+
+
+<pre>
+  {{formService.value | json}}
+</pre>

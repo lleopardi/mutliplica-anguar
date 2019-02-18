@@ -16,4 +16,12 @@ export class ListServicesComponent implements OnInit {
   ngOnInit() {
   }
 
+  edit() {
+    console.log('editar');
+  }
+
+  delete() {
+    console.log('delete');
+  }
+
 }

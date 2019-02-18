@@ -1,5 +1,7 @@
-<p>
-  list-services works!
-</p>
+<ul>
+  <li *ngFor="let item  of listServices">{{item.name}}
+     <span (click)="edit()">editar</span>
+     <span (click)="delete()">eliminar</span>
+    </li>
+</ul>
 
-{{listServices | json}}
