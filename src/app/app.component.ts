@@ -11,6 +11,7 @@ export class AppComponent implements OnInit {
 
   title = 'ejercicio14';
   listServices: ServiceBackend[];
+  serviceToEdit: ServiceBackend;
   constructor(private servicesProvide: ServicesProvidedService) { }
 
   ngOnInit(): void {
@@ -25,5 +26,6 @@ export class AppComponent implements OnInit {
 
   onEdit(service: ServiceBackend) {
     console.log(service);
+    this.serviceToEdit = service;
   }
 }

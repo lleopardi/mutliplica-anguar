@@ -1,7 +1,7 @@
 <ul>
-  <li *ngFor="let item  of listServices">{{item.name}}
-     <span (click)="edit()">editar</span>
-     <span (click)="delete()">eliminar</span>
-    </li>
-</ul>
+    <li *ngFor="let item  of listServices">{{item.name}}
+       <span (click)="onClickEdit(item)">editar</span>
+       <span (click)="onClickDelete(item.id)">eliminar</span>
+      </li>
+  </ul>
 

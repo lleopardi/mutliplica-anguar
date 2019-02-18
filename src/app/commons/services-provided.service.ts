@@ -25,4 +25,9 @@ export class ServicesProvidedService {
     return this.http.delete(apiDelete);
   }
 
+  public update(id: number, service: ServiceBackend): Observable<ServiceBackend> {
+    const apiUpdate = `${this.api}${id}`;
+    return this.http.put<ServiceBackend>(apiUpdate, service);
+  }
+
 }
