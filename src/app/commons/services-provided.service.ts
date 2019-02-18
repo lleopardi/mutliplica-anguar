@@ -20,4 +20,9 @@ export class ServicesProvidedService {
     return this.http.post<ServiceBackend>(this.api, data);
   }
 
+  public delete(id: number): Observable<{}> {
+    const apiDelete = `${this.api}${id}`;
+    return this.http.delete(apiDelete);
+  }
+
 }
