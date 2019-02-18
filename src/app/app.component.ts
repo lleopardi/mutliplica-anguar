@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
 
   title = 'ejercicio14';
   listServices: ServiceBackend[];
-  constructor(private servicesProvide: ServicesProvidedService) {  }
+  constructor(private servicesProvide: ServicesProvidedService) { }
 
   ngOnInit(): void {
     this.getServices();
@@ -21,5 +21,9 @@ export class AppComponent implements OnInit {
     this.servicesProvide.findAll().subscribe((response) => {
       this.listServices = response;
     });
+  }
+
+  onEdit(service: ServiceBackend) {
+    console.log(service);
   }
 }
